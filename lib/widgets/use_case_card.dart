@@ -21,7 +21,7 @@ class UseCaseCard extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(16.0)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black45,
+            color: Colors.black12,
             offset: Offset(0.0, 6.0),
             blurRadius: 12.0,
           ),
