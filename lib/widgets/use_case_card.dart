@@ -16,6 +16,7 @@ class UseCaseCard extends StatelessWidget {
       constraints: BoxConstraints.tight(
         const Size.square(100),
       ),
+      clipBehavior: Clip.antiAlias,
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(16.0)),
