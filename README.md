@@ -1,4 +1,4 @@
-# nuvigator_demo
+# Nuvigator Demo
 
 An application demonstrating the features offered by Nubank's [Nuvigator](https://github.com/nubank/nuvigator) package.
 
