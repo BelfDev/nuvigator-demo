@@ -5,8 +5,9 @@ import 'package:nuvigator_demo/use_case/use_case_spec.dart';
 
 class OpenDeepLinkUseCase extends UseCaseSpec {
   OpenDeepLinkUseCase({
+    String title = 'Push deeplink',
     this.pushMethod = DeepLinkPushMethod.Push,
-  }) : super('Open deeplink');
+  }) : super(title);
 
   final DeepLinkPushMethod pushMethod;
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nuvigator/next.dart';
 import 'package:nuvigator_demo/use_case/open_deeplink_use_case.dart';
 import 'package:nuvigator_demo/use_case/push_named_use_case.dart';
 import 'package:nuvigator_demo/widgets/use_case_card.dart';
@@ -11,6 +12,14 @@ class HomePage extends StatelessWidget {
   static final _useCases = [
     PushNamedUseCase(),
     OpenDeepLinkUseCase(),
+    OpenDeepLinkUseCase(
+      title: 'Push Replacement deeplink',
+      pushMethod: DeepLinkPushMethod.Push,
+    ),
+    OpenDeepLinkUseCase(
+      title: 'Pop and Push deeplink',
+      pushMethod: DeepLinkPushMethod.PopAndPush,
+    ),
   ];
 
   @override

@@ -30,7 +30,10 @@ class UseCaseCard extends StatelessWidget {
       ),
       child: TextButton(
         onPressed: onPressed,
-        child: Text(title),
+        child: Text(
+          title,
+          textAlign: TextAlign.center,
+        ),
       ),
     );
   }
