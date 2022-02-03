@@ -3,7 +3,7 @@ import 'package:nuvigator_demo/widgets/use_case_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override

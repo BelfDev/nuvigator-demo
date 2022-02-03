@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class UseCaseCard extends StatelessWidget {
   const UseCaseCard({
-    required this.title,
+    @required this.title,
     this.onPressed,
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   final String title;
-  final VoidCallback? onPressed;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
