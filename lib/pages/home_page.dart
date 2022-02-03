@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:nuvigator_demo/use_case/push_use_case.dart';
 import 'package:nuvigator_demo/widgets/use_case_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
     Key key,
   }) : super(key: key);
+
+  static final _useCases = [
+    PushNamedUseCase(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +22,14 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(24.0),
         crossAxisSpacing: 16.0,
         mainAxisSpacing: 16.0,
-        children: List.generate(
-          100,
-          (index) => UseCaseCard(
-            title: 'Use Case $index',
-            onPressed: () {},
+        children: [
+          ..._useCases.map(
+            (useCase) => UseCaseCard(
+              title: useCase.name,
+              onPressed: () => useCase.execute(context),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

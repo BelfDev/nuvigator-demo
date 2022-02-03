@@ -15,24 +15,30 @@ class SamplePageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: color.withOpacity(0.25),
       appBar: AppBar(
         title: Text('Page $label'),
+        backgroundColor: color,
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Text(
-              'Sample $label page',
-              style: const TextStyle(fontSize: 24.0),
-            ),
-            if (onNextPressed != null)
-              ElevatedButton(
-                onPressed: onNextPressed,
-                child: const Text('Next'),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Align(
+            alignment: Alignment.center,
+            child: Text(
+              'Sample page $label',
+              style: const TextStyle(
+                fontSize: 24.0,
+                color: Colors.grey,
               ),
-          ],
-        ),
+            ),
+          ),
+          if (onNextPressed != null)
+            ElevatedButton(
+              onPressed: onNextPressed,
+              child: const Text('Next'),
+            ),
+        ],
       ),
     );
   }
